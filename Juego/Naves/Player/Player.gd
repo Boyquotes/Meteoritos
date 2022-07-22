@@ -2,7 +2,7 @@ class_name Player
 extends RigidBody2D
 
 #Atributos Exports
-export var potencia_motor:int = 20
+export var potencia_motor:int = 15
 export var potencia_rotacion:int = 280
 
 #Atributos

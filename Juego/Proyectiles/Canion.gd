@@ -17,6 +17,21 @@ onready var esta_disparando:bool = false setget set_esta_disparando
 ## Atributos
 var puntos_disparo:Array = []
 
+# Metodos
+func _ready() -> void:
+	almacenar_puntos_disparo()
+	timer_enfriamiento.wait_time = cadencia_disparo
+
+func _process(delta: float) -> void:
+	if esta_disparando and esta_enfriado:
+		disparar()
+		
+# Metodos Custom
+func almacenar_puntos_disparos() -> void:
+	for nodo in get_children():
+		if nodo is Position2D:
+			puntos_disparo.append(nodo)
+
 ##Setters y Getters
 func set_esta_disparando(disparando: bool) -> void:
 	esta_disparando = disparando

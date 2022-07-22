@@ -9,6 +9,9 @@ export var potencia_rotacion:int = 280
 var empuje: Vector2 = Vector2.ZERO
 var dir_rotacion:int = 0
 
+## Atributos Onready
+onready var canion:Canion = $Canion
+
 #Metodos
 func _integrate_forces(state: Physics2DDirectBodyState) -> void:
 	#print(rad2deg(rotation))

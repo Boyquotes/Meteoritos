@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Juego/Naves/Player/nave.png" type="Texture" id=1]
 [ext_resource path="res://Juego/Naves/Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Juego/Proyectiles/Canion.tscn" type="PackedScene" id=3]
 
 [sub_resource type="PhysicsMaterial" id=2]
 friction = 0.0
@@ -22,3 +23,17 @@ texture = ExtResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 1.5026 )
 shape = SubResource( 1 )
+
+[node name="Canion" parent="." instance=ExtResource( 3 )]
+position = Vector2( 39.0626, 0 )
+cadencia_disparo = null
+velocidad_proyectil = null
+danio_proyectil = null
+
+[node name="PuntoIzquierdo" parent="Canion" index="0"]
+position = Vector2( 0, -35 )
+
+[node name="PuntoDerecho" parent="Canion" index="1"]
+position = Vector2( 0, 35 )
+
+[editable path="Canion"]

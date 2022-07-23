@@ -26,9 +26,6 @@ shape = SubResource( 1 )
 
 [node name="Canion" parent="." instance=ExtResource( 3 )]
 position = Vector2( 39.0626, 0 )
-cadencia_disparo = null
-velocidad_proyectil = null
-danio_proyectil = null
 
 [node name="PuntoIzquierdo" parent="Canion" index="0"]
 position = Vector2( 0, -35 )
